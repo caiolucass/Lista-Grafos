@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lista_pratica
 {
-    /*Classe de grafos*/
+
    public class Grafo
     {
 
@@ -16,11 +16,15 @@ namespace Lista_pratica
         string[] arquivo;
         bool direcinado;
 
-        ///<sumary name="Lista de Vértices e Arestas"/>
+         /*
+         *Lista de vértice e arestas
+         */
         List<Vertice> lista_Vertice;
         List<Aresta> lista_Aresta;
 
-        ///<sumary name="Construtor"/>
+        /*
+         *Construtor da classe grafos
+         */
         public Grafo(string[] Arquivo)
         {
             this.quant_Vertices = int.Parse(Arquivo[0]);
@@ -30,8 +34,9 @@ namespace Lista_pratica
             this.lista_Aresta = new List<Aresta>();
         }
 
-        ///<sumary name="Método para procurar vértices no grafo"/>
-        ///<param name="vertice v"/>
+        /*
+         *Método de busca de vértice no grafo
+         */
         public Vertice procurar_Vertice(Vertice v)
         {
             for (int i = 0; i < lista_Vertice.Count(); i++)
@@ -45,8 +50,9 @@ namespace Lista_pratica
         }
 
 
-        ///<sumary name="Método para ver se os vertices sao adjacentes"/>
-        ///<param name="vertice v1"  name="vertice v2"/>
+        /*
+         *Método para ver se os vértices sao adjacentes
+         */
         public bool IsAdjacente(Vertice v1, Vertice v2)
         {
             v1 = this.procurar_Vertice(v1);
@@ -78,7 +84,9 @@ namespace Lista_pratica
             return false;
         }
 
-        ///<sumary name="Imprimir as informações do grafo"/>
+        /*
+         *Imprimi as informações do grafo
+         */
         public override string ToString()
         {
             string arq = "";
@@ -91,7 +99,10 @@ namespace Lista_pratica
             return arq;
         }
 
-        ///<sumary name="Seção dos métodos Getters e Setters"/>
+        /*
+         *Seção dos métodos Getters e Setters
+         */
+         
         //Quantidade de vertices
         public int Quant_Vertices
         {

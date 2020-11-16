@@ -4,7 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
+
+ /*
+  *Interface do grafo dirigido, com os métodos complementares
+  *Caio Lucas F. Dos Santos  Matrícula:604365
+  *Wernen Rodrigues Maciel   Matrícula:597704
+  */
 
 namespace Lista_pratica
 {

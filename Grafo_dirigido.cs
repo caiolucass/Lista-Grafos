@@ -4,20 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 
 namespace Lista_pratica
 {
     public class Grafo_dirigido : Grafo, Interface_grafo_dirigido
     {
-        ///<sumary name="Construtor do grafo dirigido"/>
-        ///<param name="Arquivo"/>
+        /*
+         *Construtor da classe do grafo dirigido
+         */
         public Grafo_dirigido(string[] Arquivo) : base(Arquivo)
         {
             this.preencher_Grafo();
         }
 
-        ///<param name="Método para preencher o grafo"/>
+        /*
+         *Método de preenchimento do grafo
+         */
         private void preencher_Grafo()
         {
             string[] Linha;
@@ -75,8 +81,9 @@ namespace Lista_pratica
             }
         }
 
-        ///<sumary name="Método para obter o grau de entrada de um vértice"/>
-        ///<param name="vértice"/>
+        /*
+         *Método para obter o grau de entrada do vértice
+         */
         public int get_GrauEntrada(Vertice v1)
         {
             int grauEntrada = 0;
@@ -105,8 +112,9 @@ namespace Lista_pratica
             return grauEntrada;
         }
 
-        ///<sumary name="Método para obter o grau de sáida de um grafo"/>
-        ///<param name="vertice"/>
+        /*
+         *Método para obter o grau de saída do vértice
+         */
         public int get_GrauSaida(Vertice v1)
         {
             int grauSaida = 0;
@@ -131,7 +139,9 @@ namespace Lista_pratica
             return grauSaida;
         }
 
-        ///<param name="Método para ver se o grafo possui um ciclo"/>
+        /*
+         *Método para ver se o grafo possui ciclo
+         */
         public bool Has_Ciclo()
         {
             return true;

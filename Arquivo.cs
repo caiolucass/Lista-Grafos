@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
+
 namespace Lista_pratica
 {
     class Arquivo
     {
         string ArquivoNome;
         StreamReader Leitor;
-
-        
+ 
         /*
-        *@Sumary: Construtor classe Arquivo
+        * Construtor da classe Arquivo
         */
         public Arquivo (string ArquivoNome)
         {
             this.ArquivoNome = ArquivoNome;
-           //ArquivoNome = 'C:\Users\Wernen\Documents\Lista_pratica\bin\Debug\netcoreapp3.1\Grafo_dirigido';
+            //verifica se o arquivo contem "txt"
             if (this.ArquivoNome.IndexOf(".txt") == -1)
             {
                 this.ArquivoNome = this.ArquivoNome + ".txt";
@@ -26,7 +30,7 @@ namespace Lista_pratica
         }
 
         /*
-         *@Sumary: Metodo de Leitura de Arquivo
+         *Metodo de Leitura de Arquivo
          */
         public string[] LeituraAquivo()
         {

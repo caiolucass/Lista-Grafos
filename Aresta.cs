@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 
 namespace Lista_pratica
 {
@@ -16,8 +19,9 @@ namespace Lista_pratica
         private Vertice vert_2;
         private int direcao;
 
-        ///<sumary name="Construtor do grafo não-dirigido"/>
-        ///<param name="peso"  name="vertice vert_1" name="vertice vert_2"/>
+        /*
+         *Construtor da classe Aresta
+         */
         public Aresta(int peso, Vertice vert_1, Vertice vert_2)
         {
             this.peso = peso;
@@ -25,8 +29,9 @@ namespace Lista_pratica
             this.vert_2 = vert_2;
         }
 
-        ///<sumary name="Construtor do grafo dirigido"/>
-        ///<param name="peso"  name="vertice vert_1" name="vertice vert_2" name="direcao"/>
+         /*
+         *Construtor do grafo dirigido
+         */
         public Aresta(int peso, Vertice vert_1, Vertice vert_2, int direcao)
         {
             this.peso = peso;
@@ -35,10 +40,12 @@ namespace Lista_pratica
             this.direcao = direcao;
         }
 
-        ///<sumary name="Imprimir as informações das arestas"/>
+         /*
+         *Imprimi as informações das arestas
+         */
         public override string ToString()
         {
-            // verifica se é direcionado
+            // verifica se a aresta é direcionada
             if (this.direcao != 0)
             {
                 if (this.direcao == 1)
@@ -56,7 +63,9 @@ namespace Lista_pratica
             }
         }
 
-        ///<sumary name="Seção para os métodos Getters e Setters"/>
+        /*
+         *Seção dos métodos Getters e Setter
+         */
         //Peso
         public int Peso
         {

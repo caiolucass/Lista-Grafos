@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 
 namespace Lista_pratica
 {
     public class Grafo_nao_dirigido : Grafo, Interface_grafo_nao_dirigido
     {
-        ///<sumary name="Construtor"/>
+        /*
+         *Construtor do grafo não-dirigido
+         */
         public Grafo_nao_dirigido (string[] Arquivo) : base(Arquivo)
         {
             this.preencher_Grafo();

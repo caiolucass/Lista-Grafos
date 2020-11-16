@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 
 namespace Lista_pratica
 {
@@ -16,8 +18,9 @@ namespace Lista_pratica
         private List<Aresta> aresta;
        
 
-        ///<sumary name="Construtor"/>
-        ///<param name="nome"/>
+        /*
+         *Construtor da classe vertice
+         */
         public Vertice(string nome)
         {
             this.nome = nome;
@@ -25,22 +28,25 @@ namespace Lista_pratica
             this.aresta = new List<Aresta>();
         }
 
-        ///<sumary name="Método para adicionar vértice adjacente"/>
-        ///<param name="vértice"/>
+        /*
+         *Método para adicionar vertice adjacente
+         */
         public void adicionar_Adjacente(Vertice vertice)
         {
             this.adjacente.Add(vertice);
         }
 
-        ///<sumary name="Método para adicionar arestas"/>
-        ///<param name="arestas"/>
+        /*
+         *Méotodo para adicionar aresa
+         */
         public void adicionar_Aresta(Aresta aresta)
         {
             this.aresta.Add(aresta);
         }
 
-        ///<sumary name="Método para obter os vértices adjacentes"/>
-        ///<param name="vértice"/>
+        /*
+         *Método para  obter o vértice adjacente
+         */
         public Vertice get_Adjacente(Vertice vertice)
         {
             //percorre os vértices adjacentes
@@ -55,8 +61,9 @@ namespace Lista_pratica
             return null;
         }
 
-        ///<sumary name="Método para obter os vértices adjacentes"/>
-        ///<param name="vértice"/>
+        /*
+         *Método para obter a aresta de ligacao
+         */
         public Aresta get_ArestaLigacao(Vertice vertice, List<Aresta> aresta)
         {
             for (int i = 0; i <= aresta.Count(); i++)
@@ -69,7 +76,10 @@ namespace Lista_pratica
             return aresta[0];
         }
 
-        ///<sumary name="Seção para os métodos Getters e Setters"/>
+       /*
+         *Sessão dos métodos Getters e Setters
+         */
+
         //Nome
         public string Nome
         {

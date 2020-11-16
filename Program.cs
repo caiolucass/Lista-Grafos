@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365"  name="Wernen Rodrigues Maciel"/>
+/*
+ *Caio Lucas F. Dos Santos  Matrícula:604365
+ *Wernen Rodrigues Maciel   Matrícula:597704
+ */  
 
 namespace Lista_pratica
 {
@@ -17,18 +20,19 @@ namespace Lista_pratica
         static string Arq;
         static bool dirigido;
 
-        ///<sumary name="Método para grafo direcionado"/>
-        ///<param name="Caso as linhas com informações dosos vértices possuírem 4 caracteres separados por vírgula, temos um grafo dirigido."/>
-        ///
+          /*
+         *Método para printar o grafo
+         */
         static void PrintGrafo<G>(G grafo){
             Console.WriteLine(grafo.ToString());
         }
-
         static void Resposta(string resposta){  
             Console.WriteLine("\n" + resposta);
-            Console.ResetColor();
         }
 
+       /*
+       *Método principal(main) do programa
+       */
         static void Main(string[] args){
             Console.WindowWidth = 100;
 
@@ -39,7 +43,8 @@ namespace Lista_pratica
             Grafo_dirigido digrafo = null;
             Vertice v1, v2;
 
-            // Em cada do arquivo linha haverá informações de um vértice, sendo que o arquivo lido pode conter
+            // Em cada do arquivo linha haverá informações de um vértice, 
+            //sendo que o arquivo lido pode conter
             string [] Arquivo;
 
             Console.WriteLine("Informe o nome do arquivo: ");
@@ -65,12 +70,6 @@ namespace Lista_pratica
                     Menu = int.Parse(Console.ReadLine());
                     Console.WriteLine();
                     switch (Menu){
-                        //case 0:
-                        //    Console.WriteLine("Informe o nome do arquivo: ");
-                        //    Arq = Console.ReadLine();
-                        //    criarGrafo(dirigido, Arquivo, ref grafo, ref digrafo);
-                        //    break;
-
                         case 1:
                             PrintGrafo(digrafo);
                             break;
@@ -96,7 +95,7 @@ namespace Lista_pratica
                         default:
                             if (Menu != -1){
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("\nA Opção escolhida é inválida. Pressione qualquer tecla e tente novamente.");
+                                Console.WriteLine("\nA Opção escolhida é inválida. Pressione qualquer tecla.");
                                 Console.ResetColor();
                             }
                             break;
@@ -120,12 +119,6 @@ namespace Lista_pratica
                     Console.WriteLine();
 
                     switch (Menu){
-                        //case 0:
-                        //    Console.WriteLine("Informe o nome do arquivo: ");
-                        //    Arq = Console.ReadLine();
-                        //    criarGrafo(dirigido, Arquivo, ref grafo, ref digrafo);
-                        //    break;
-
                         case 1:
                             PrintGrafo(grafo);
                             break;
@@ -195,7 +188,9 @@ namespace Lista_pratica
             }
         }
 
-        // Metodo para saber se o grafo é dirigido 
+        /*
+        *Metodo para saber se o grafo é dirigido 
+        */
         static bool isDirigido(string Linha){
             string[] vetor = Linha.Split(';');
 
@@ -208,8 +203,7 @@ namespace Lista_pratica
         }
 
         /*
-        *@Sumary: Metodo para verificar se o grafo é Direcionado
-        *@Param: string Linha
+        *Metodo para verificar se o grafo é Direcionado
         */
         static bool IsDirecionado(string Linha)
         {
@@ -222,7 +216,10 @@ namespace Lista_pratica
                 return false;
             }
         }
-        ///<sumary name="Método para criar os tipos de grafos"/>
+        
+         /*
+        *Metodo criar um grafo
+        */
         static void criarGrafo(bool dirigido, string[] Arquivo, ref Grafo_nao_dirigido grafo, ref Grafo_dirigido digrafo){
             arquivo = new Arquivo(Arq);
 
@@ -238,29 +235,29 @@ namespace Lista_pratica
             }  
         }
 
-        ///<sumary name="Menu de opções do programa"/>
+        /*
+        *Menu de opções do programa
+        */
         static void menu(bool dirigido) {
 
             if (dirigido){
                 Console.WriteLine("Nomes: Caio Lucas F. Dos Santos matricula:604365  Wernen Rodrigues Maciel matricula:597704");
                 Console.WriteLine("Menu do grafo dirigido");
                 Console.WriteLine("-1 - Sair.");
-                //Console.WriteLine("0 - Criar um grafo.");
                 Console.WriteLine("1 - Imprimir grafo.");
                 Console.WriteLine("2 - Obter o grau de entrada do vértice.");
                 Console.WriteLine("3 - Obter grau de saída do vértice.");
             }
             else{
-                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos  604365  Wernen Rodrigues Maciel 597704");
+                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos 604365  Wernen Rodrigues Maciel 597704");
                 Console.WriteLine("Menu do grafo não-dirigido");
                 Console.WriteLine("-1 - Sair.");
-                //Console.WriteLine("0 - Criar grafo.");
                 Console.WriteLine("1 - Imprimir grafo.");
-                Console.WriteLine("2 - Verificar se pelo menos dois vértices são adjacentes.");
+                Console.WriteLine("2 - Verificar se pelo menos (2) dois vértices são adjacentes.");
                 Console.WriteLine("3 - Obter grau o vértice.");
                 Console.WriteLine("4 - Verificar se um vértice do grafo é pendente.");
                 Console.WriteLine("5 - Verificar se um vértice do grafo é regular.");
-                Console.WriteLine("6 - Verificarse um vértice do grafo é nulo.");
+                Console.WriteLine("6 - Verificar se um vértice do grafo é nulo.");
                 Console.WriteLine("7 - Verificar se o grafo é completo.");
                 Console.WriteLine("8 - Verificar se o grafo é conexo.");
             }
