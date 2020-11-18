@@ -11,51 +11,86 @@ using System.Threading;
  *Wernen Rodrigues Maciel   Matrícula:597704
  */  
 
-namespace Lista_pratica
-{
-    class Program
-    {
+namespace Lista_pratica{
+
+    class Program{
         static Arquivo arquivo;
         static Random random = new Random();
         static string Arq;
         static bool dirigido;
 
-          /*
+       /*
+        *Metodo criar um grafo
+        */
+        static void criarGrafo(bool dirigido, string[] Arquivo, ref Grafo_nao_dirigido grafo, 
+                                                                ref Grafo_dirigido digrafo){
+            arquivo = new Arquivo(Arq);
+            Arquivo = arquivo.LeituraAquivo();
+            dirigido = IsDirecionado(Arquivo[1]);
+
+            if (dirigido){
+                digrafo = new Grafo_dirigido(Arquivo);
+            }
+            else{
+                grafo = new Grafo_nao_dirigido(Arquivo);
+            }  
+        }
+
+        /*
          *Método para printar o grafo
          */
         static void PrintGrafo<G>(G grafo){
             Console.WriteLine(grafo.ToString());
         }
-        static void Resposta(string resposta){  
-            Console.WriteLine("\n" + resposta);
+        static void Resposta(string responde){  
+            Console.WriteLine("\n" + responde);
+        }
+      
+        /*
+        *Metodo para saber se o grafo é dirigido 
+        */
+        static bool isDirigido(string Linha){
+            string[] vetor = Linha.Split(';');
+
+            if (vetor.Length == 4) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        /*
+        *Metodo para verificar se o grafo é Direcionado
+        */
+        static bool IsDirecionado(string Linha){
+            string[] vetor = Linha.Split(';');
+
+            if (vetor.Length == 4){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
        /*
        *Método principal(main) do programa
        */
         static void Main(string[] args){
-            Console.WindowWidth = 100;
-
-            // Classe para acesso aos dados (Data Access Object).
             int Menu;
             string resposta;
             Grafo_nao_dirigido grafo = null;
             Grafo_dirigido digrafo = null;
             Vertice v1, v2;
-
-            // Em cada do arquivo linha haverá informações de um vértice, 
-            //sendo que o arquivo lido pode conter
             string [] Arquivo;
 
             Console.WriteLine("Informe o nome do arquivo: ");
             Arq = Console.ReadLine();
 
             arquivo = new Arquivo(Arq);
-
             Arquivo = arquivo.LeituraAquivo();
-
             dirigido = IsDirecionado(Arquivo[1]);
-
             criarGrafo(dirigido, Arquivo, ref grafo, ref digrafo);
 
             if (dirigido){
@@ -91,16 +126,12 @@ namespace Lista_pratica
                             resposta = (grauVertice == -1) ? "Vértice Inexistente" : "O grau de saída do vértice é " + grauVertice + ".";
                             Resposta(resposta);
                             break;
-
                         default:
                             if (Menu != -1){
-                                Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("\nA Opção escolhida é inválida. Pressione qualquer tecla.");
-                                Console.ResetColor();
                             }
                             break;
                     }
-
                     if (Menu != -1){
                         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal.");
                         Console.ReadKey();
@@ -109,7 +140,6 @@ namespace Lista_pratica
             }
             else{
                 string vertice;
-
                 do {
                     Console.Clear();
                     Console.WriteLine("Escolha uma opção:\n");
@@ -117,7 +147,6 @@ namespace Lista_pratica
                     Console.WriteLine();
                     Menu = int.Parse(Console.ReadLine());
                     Console.WriteLine();
-
                     switch (Menu){
                         case 1:
                             PrintGrafo(grafo);
@@ -183,83 +212,37 @@ namespace Lista_pratica
                         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal.");
                         Console.ReadKey();
                     }
-
                 } while (Menu != -1);
             }
-        }
-
-        /*
-        *Metodo para saber se o grafo é dirigido 
-        */
-        static bool isDirigido(string Linha){
-            string[] vetor = Linha.Split(';');
-
-            if (vetor.Length == 4) {
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-
-        /*
-        *Metodo para verificar se o grafo é Direcionado
-        */
-        static bool IsDirecionado(string Linha)
-        {
-            string[] vetor = Linha.Split(';');
-
-            if (vetor.Length == 4){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        
-         /*
-        *Metodo criar um grafo
-        */
-        static void criarGrafo(bool dirigido, string[] Arquivo, ref Grafo_nao_dirigido grafo, ref Grafo_dirigido digrafo){
-            arquivo = new Arquivo(Arq);
-
-            Arquivo = arquivo.LeituraAquivo();
-
-           dirigido = IsDirecionado(Arquivo[1]);
-
-            if (dirigido){
-                digrafo = new Grafo_dirigido(Arquivo);
-            }
-            else{
-                grafo = new Grafo_nao_dirigido(Arquivo);
-            }  
         }
 
         /*
         *Menu de opções do programa
         */
         static void menu(bool dirigido) {
-
             if (dirigido){
-                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos matricula:604365  Wernen Rodrigues Maciel matricula:597704");
+                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos matricula:604365");
+                Console.WriteLine("Wernen Rodrigues Maciel matricula:597704");
+
                 Console.WriteLine("Menu do grafo dirigido");
                 Console.WriteLine("-1 - Sair.");
-                Console.WriteLine("1 - Imprimir grafo.");
-                Console.WriteLine("2 - Obter o grau de entrada do vértice.");
-                Console.WriteLine("3 - Obter grau de saída do vértice.");
+                Console.WriteLine(" 1 - Imprimir grafo.");
+                Console.WriteLine(" 2 - Obter o grau de entrada do vértice.");
+                Console.WriteLine(" 3 - Obter grau de saída do vértice.");
             }
             else{
-                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos 604365  Wernen Rodrigues Maciel 597704");
+                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos 604365");
+                Console.WriteLine("Wernen Rodrigues Maciel matricula:597704");
                 Console.WriteLine("Menu do grafo não-dirigido");
                 Console.WriteLine("-1 - Sair.");
-                Console.WriteLine("1 - Imprimir grafo.");
-                Console.WriteLine("2 - Verificar se pelo menos (2) dois vértices são adjacentes.");
-                Console.WriteLine("3 - Obter grau o vértice.");
-                Console.WriteLine("4 - Verificar se um vértice do grafo é pendente.");
-                Console.WriteLine("5 - Verificar se um vértice do grafo é regular.");
-                Console.WriteLine("6 - Verificar se um vértice do grafo é nulo.");
-                Console.WriteLine("7 - Verificar se o grafo é completo.");
-                Console.WriteLine("8 - Verificar se o grafo é conexo.");
+                Console.WriteLine(" 1 - Imprimir grafo.");
+                Console.WriteLine(" 2 - Verificar se pelo menos (2) dois vértices são adjacentes.");
+                Console.WriteLine(" 3 - Obter grau o vértice.");
+                Console.WriteLine(" 4 - Verificar se um vértice do grafo é pendente.");
+                Console.WriteLine(" 5 - Verificar se um vértice do grafo é regular.");
+                Console.WriteLine(" 6 - Verificar se um vértice do grafo é nulo.");
+                Console.WriteLine(" 7 - Verificar se o grafo é completo.");
+                Console.WriteLine(" 8 - Verificar se o grafo é conexo.");
             }
         }
     }

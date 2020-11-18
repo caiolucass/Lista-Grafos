@@ -9,21 +9,18 @@ using System.Threading.Tasks;
 *Wernen Rodrigues Maciel   Matrícula:597704
 */
 
-namespace Lista_pratica
-{
-    public class Vertice
-    {
-        private string nome;
+namespace Lista_pratica{ 
+
+    public class Vertice{
+        private string titulo;
         private List<Vertice> adjacente;
         private List<Aresta> aresta;
        
-
         /*
          *Construtor da classe vertice
          */
-        public Vertice(string nome)
-        {
-            this.nome = nome;
+        public Vertice(string titulo){
+            this.titulo = titulo;
             this.adjacente = new List<Vertice>();
             this.aresta = new List<Aresta>();
         }
@@ -31,30 +28,27 @@ namespace Lista_pratica
         /*
          *Método para adicionar vertice adjacente
          */
-        public void adicionar_Adjacente(Vertice vertice)
-        {
+        public void adicionar_Adjacente(Vertice vertice){
             this.adjacente.Add(vertice);
         }
 
         /*
          *Méotodo para adicionar aresa
          */
-        public void adicionar_Aresta(Aresta aresta)
-        {
+        public void adicionar_Aresta(Aresta aresta){
             this.aresta.Add(aresta);
         }
 
         /*
          *Método para  obter o vértice adjacente
          */
-        public Vertice get_Adjacente(Vertice vertice)
-        {
+        public Vertice get_Adjacente(Vertice vertice){
+
             //percorre os vértices adjacentes
             for (int i = 0; i < this.adjacente.Count(); i++)
             {
                 //verifica se o vertice é igual ao vertice adjacente
-                if (vertice.nome == this.adjacente[i].nome)
-                {
+                if (vertice.titulo == this.adjacente[i].titulo){
                     return this.adjacente[i];
                 }
             }
@@ -64,12 +58,10 @@ namespace Lista_pratica
         /*
          *Método para obter a aresta de ligacao
          */
-        public Aresta get_ArestaLigacao(Vertice vertice, List<Aresta> aresta)
-        {
-            for (int i = 0; i <= aresta.Count(); i++)
-            {
-                if (Convert.ToInt32 (vertice.nome) == this.aresta[i].Peso)
-                {
+        public Aresta get_ArestaLigacao(Vertice vertice, List<Aresta> aresta){
+
+            for (int i = 0; i <= aresta.Count(); i++){
+                if (Convert.ToInt32 (vertice.titulo) == this.aresta[i].Peso) {
                     return this.aresta[i];
                 }
             }
@@ -79,24 +71,19 @@ namespace Lista_pratica
        /*
          *Sessão dos métodos Getters e Setters
          */
-
-        //Nome
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
+        public string Titulo{
+            get { return titulo; }
+            set { titulo = value; }
         }
 
         //Lista de vértices adjacentes
-        internal List<Vertice> Adjacente
-        {
+        public List<Vertice> Adjacente{
             get => adjacente;
             set => adjacente = value;
         }
 
         //Lista de arestas
-        public List<Aresta> Aresta
-        {
+        public List<Aresta> Aresta{
             get => aresta;
             set => aresta = value;
         }
