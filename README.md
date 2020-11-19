@@ -5,7 +5,7 @@
 ### Membros: Caio Lucas F. Dos Santos/ Wernen Rodrigues Maciel
 
 ## Regras
-Para  a  realização  dos  testes  e  avaliação  do  código  desenvolvido,  será  fornecido  um  arquivo  texto  de entrada que apresentará, na primeira linha, o número de verticesdo grafo. As linhas seguintes desse arquivo  de  entrada  conterão,  cada  uma, informações  sobre  cada  arestadografo,  no  seguinte formato: vértice  v1;  vértice  v2;  peso  da  aresta;  direção  da  aresta.  Apenas  grafos  dirigidos apresentarão esse último valor em cada linha do arquivo de entrada. Se o valor desse parâmetro for 1, a aresta é direcionada de v1para v2. Se o valor desse parâmetro for -1, a aresta tema direção contrária, sendo direcionada, portanto,de v2para v1.Seguem exemplosde arquivosde entrada
+Para  a  realização  dos  testes  e  avaliação  do  código  desenvolvido,  será  fornecido  um  arquivo  texto  de entrada que apresentará, na primeira linha, o número de verticesdo grafo. As linhas seguintes desse arquivo  de  entrada  conterão,  cada  uma, informações  sobre  cada  arestadografo,  no  seguinte formato: vértice  v1;  vértice  v2;  peso  da  aresta;  direção  da  aresta.  Apenas  grafos  dirigidos apresentarão esse último valor em cada linha do arquivo de entrada. Se o valor desse parâmetro for 1, a aresta é direcionada de v1para v2. Se o valor desse parâmetro for -1, a aresta tema direção contrária, sendo direcionada, portanto,de v2para v1.Seguem exemplos de arquivos de entrada.
 
 ### :warning: 1. Requisitos :warning:
 ### Grafos dirigidos
