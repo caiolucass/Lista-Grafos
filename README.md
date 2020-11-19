@@ -1,7 +1,7 @@
 <h2 align=center>:book: PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS :book:</h2>
 <h3 align=center>Instituto de Ciências Exatas e Informática</h3>
 <h3 align=center>Curso: Sistemas de informação / 2° semestre de 2020</h3>
-<h3 align=center>Lista prática/ Algoritmos em grafos</h3>
+<h3 align=center>Lista prática / Algoritmos em grafos</h3>
 <h3 align=center>Caio Lucas F. Dos Santos/ Wernen Rodrigues Maciel</h3>
 
 <h3 align=center>Regras</h3>
