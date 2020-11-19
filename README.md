@@ -1,10 +1,10 @@
-# PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS
-
+## PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS
 ## Instituto de Ciências Exatas e Informática
 ## Curso: Sistema de Informação / 2° semestre de 2020
 ## Lista Prática / Algortimos em Grafos
+## Membros: Caio Lucas F. Dos Santos/ Wernen Rodrigues Maciel
 
-## 1. Requisitos
+### 1. Requisitos
 ### Grafos dirigidos
 - [x] bool isAdjacente (Vertice v1, Vertice v2)
 - [x] int getGrau (Vertice v1)
