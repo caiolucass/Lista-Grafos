@@ -1,8 +1,8 @@
-## :book: PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS :book:
-### Instituto de Ciências Exatas e Informática
-### Curso: Sistemas de Informação / 2° semestre de 2020
-### Lista Prática / Algortimos em Grafos
-### Membros: Caio Lucas F. Dos Santos/ Wernen Rodrigues Maciel
+<h1 align=center>:book: PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS/h1>
+<h3 align=center>Instituto de Ciências Exatas e Informática/h3>
+<h3 align=center>Curso: Sistemas de informação / 2° semestre de 2020/h3>
+<h3 align=center>Lista prática/ Algoritmos em grafos</h3>
+<h3 align=center>Caio Lucas F. Dos Santos/ Wernen Rodrigues Maciel</h3>
 
 <h3 align=center>Regras</h3>
 Para  a  realização  dos  testes  e  avaliação  do  código  desenvolvido,  será  fornecido  um  arquivo  texto  de entrada que apresentará, na primeira linha, o número de verticesdo grafo. As linhas seguintes desse arquivo  de  entrada  conterão,  cada  uma, informações  sobre  cada  arestadografo,  no  seguinte formato: vértice  v1;  vértice  v2;  peso  da  aresta;  direção  da  aresta.  Apenas  grafos  dirigidos apresentarão esse último valor em cada linha do arquivo de entrada. Se o valor desse parâmetro for 1, a aresta é direcionada de v1para v2. Se o valor desse parâmetro for -1, a aresta tema direção contrária, sendo direcionada, portanto,de v2para v1.Seguem exemplos de arquivos de entrada.
