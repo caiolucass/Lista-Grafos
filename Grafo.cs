@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
-
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 namespace Lista_pratica{
 
    public class Grafo{
@@ -51,12 +53,9 @@ namespace Lista_pratica{
             v1 = this.procurar_Vertice(v1);
             v2 = this.procurar_Vertice(v2);
 
-            //verifica se os vertices sao nulos
             if (v1 == null || v2 == null){
                 return false;
             }
-
-            //percorre a lista de vertices, contando seus numeros
             for (int i = 0; i < this.lista_Vertice.Count(); i++){
 
                 if (this.lista_Vertice[i].titulo == v1.titulo){
@@ -87,8 +86,7 @@ namespace Lista_pratica{
 
         /*
          *Seção dos métodos Getters e Setters
-         */
-         
+         */       
         //Quantidade de vertices
         public int Quant_Vertices{
             get => quant_Vertices;

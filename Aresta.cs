@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 *Caio Lucas F. Dos Santos  Matrícula:604365
 *Wernen Rodrigues Maciel   Matrícula:597704
 */
-
 namespace Lista_pratica{
 
     public class Aresta{
