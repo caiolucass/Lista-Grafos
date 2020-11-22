@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 *Wernen Rodrigues Maciel   Matrícula:597704
 */
 namespace Lista_pratica{
-    
+
+
     public class Grafo_nao_dirigido : Grafo, Interface_grafo_nao_dirigido{
         /*
          *Construtor do grafo não-dirigido
@@ -99,19 +100,17 @@ namespace Lista_pratica{
             Aresta arestaAux;
             vertAux = origem;
             arestaAux = vertAux.get_ArestaLigacao(destino, null);
-            if (arestaAux.Vert_1 != destino && arestaAux.Vert_2 != destino)
-            {
-                if (arestaAux.Vert_1 != vertAux)
-                {
+
+            if (arestaAux.Vert_1 != destino && arestaAux.Vert_2 != destino){
+
+                if (arestaAux.Vert_1 != vertAux) {
                     vertAux = arestaAux.Vert_1;
                 }
-                else
-                {
+                else{
                     return arestaAux.ToString();
                 }
             }
-            else
-            {
+            else{
                 return arestaAux.ToString();
             }
             // Regra de formação
@@ -194,7 +193,21 @@ namespace Lista_pratica{
          *Método para ver se o grafo é euleriano
          */
         public bool IsEuleriano(){
-            return true;
+            bool resposta = true;
+            if(IsConexo()== true)
+                for (int i = 1; i < this.Lista_Vertice.Count(); i++)
+                {
+                    if (GetGrau(Lista_Vertice[i]) % 2 != 1)
+                    {
+                        resposta = false;
+                    }
+                }
+            if (IsNulo())
+            {
+                resposta = false;
+            }
+            
+            return resposta;
         }
 
         /*
@@ -205,11 +218,9 @@ namespace Lista_pratica{
             bool eureliano = this.IsEuleriano();
 
             if (eureliano){
-                for (int i = 1; i < this.Lista_Vertice.Count(); i++)
-                {
-                    var grau = GetGrau(i);
+                for (int i = 1; i < this.Lista_Vertice.Count(); i++){
 
-                    if (grau % 2 != 0) {
+                    if (GetGrau(Lista_Vertice[i]) % 2 != 0) {
                         contador_Impar++;
                     }
                 }
@@ -219,8 +230,7 @@ namespace Lista_pratica{
                     return false;
                 }
             }
-            else
-{
+            else{
                 return false;
             }
         }

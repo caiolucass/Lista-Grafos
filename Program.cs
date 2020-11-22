@@ -11,11 +11,9 @@ using System.Threading;
  *Wernen Rodrigues Maciel   Matrícula:597704
  */
 
-namespace Lista_pratica
-{
+namespace Lista_pratica{
 
-    class Program
-    {
+    class Program{
         static Arquivo arquivo;
         static Random random = new Random();
         static string Arq;
@@ -25,18 +23,15 @@ namespace Lista_pratica
          *Metodo criar um grafo
          */
         static void criarGrafo(bool dirigido, string[] Arquivo, ref Grafo_nao_dirigido grafo,
-                                                                ref Grafo_dirigido digrafo)
-        {
+                                                                ref Grafo_dirigido digrafo){
             arquivo = new Arquivo(Arq);
             Arquivo = arquivo.LeituraAquivo();
             dirigido = IsDirecionado(Arquivo[1]);
 
-            if (dirigido)
-            {
+            if (dirigido){
                 digrafo = new Grafo_dirigido(Arquivo);
             }
-            else
-            {
+            else{
                 grafo = new Grafo_nao_dirigido(Arquivo);
             }
         }
@@ -44,28 +39,23 @@ namespace Lista_pratica
         /*
          *Método para printar o grafo
          */
-        static void PrintGrafo<G>(G grafo)
-        {
+        static void PrintGrafo<G>(G grafo){
             Console.WriteLine(grafo.ToString());
         }
-        static void Resposta(string responde)
-        {
+        static void Resposta(string responde){
             Console.WriteLine("\n" + responde);
         }
 
         /*
         *Metodo para saber se o grafo é dirigido 
         */
-        static bool isDirigido(string Linha)
-        {
+        static bool isDirigido(string Linha){
             string[] vetor = Linha.Split(';');
 
-            if (vetor.Length == 4)
-            {
+            if (vetor.Length == 4){
                 return true;
             }
-            else
-            {
+            else{
                 return false;
             }
         }
@@ -73,16 +63,13 @@ namespace Lista_pratica
         /*
         *Metodo para verificar se o grafo é Direcionado
         */
-        static bool IsDirecionado(string Linha)
-        {
+        static bool IsDirecionado(string Linha){
             string[] vetor = Linha.Split(';');
 
-            if (vetor.Length == 4)
-            {
+            if (vetor.Length == 4){
                 return true;
             }
-            else
-            {
+            else{
                 return false;
             }
         }
@@ -90,8 +77,7 @@ namespace Lista_pratica
         /*
         *Método principal(main) do programa
         */
-        static void Main(string[] args)
-        {
+        static void Main(string[] args){
             int Menu;
             string resposta;
             Grafo_nao_dirigido grafo = null;
@@ -106,23 +92,21 @@ namespace Lista_pratica
             arquivo = new Arquivo(Arq);
             Arquivo = arquivo.LeituraAquivo();
             dirigido = IsDirecionado(Arquivo[1]);
-            criarGrafo(dirigido, Arquivo, ref grafo, ref digrafo);
 
-            if (dirigido)
-            {
+            criarGrafo(dirigido, Arquivo, ref grafo, ref digrafo);
+            if (dirigido){
                 string vertice;
                 int grauVertice;
 
-                do
-                {
+                do{
                     Console.Clear();
                     Console.WriteLine("Escolha uma opção:\n");
                     menu(dirigido);
                     Console.WriteLine();
                     Menu = int.Parse(Console.ReadLine());
                     Console.WriteLine();
-                    switch (Menu)
-                    {
+                    
+                    switch (Menu){
                         case 1:
                             PrintGrafo(digrafo);
                             break;
@@ -145,32 +129,30 @@ namespace Lista_pratica
                             Resposta(resposta);
                             break;
                         default:
-                            if (Menu != -1)
-                            {
+
+                            if (Menu != 0){
                                 Console.WriteLine("\nA Opção escolhida é inválida. Pressione qualquer tecla.");
                             }
                             break;
                     }
-                    if (Menu != -1)
-                    {
+                    if (Menu != 0){
                         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal.");
                         Console.ReadKey();
                     }
-                } while (Menu != -1);
+                } while (Menu != 0);
             }
-            else
-            {
+            else{
+
                 string vertice;
-                do
-                {
+                do{
                     Console.Clear();
                     Console.WriteLine("Escolha uma opção:\n");
                     menu(dirigido);
                     Console.WriteLine();
                     Menu = int.Parse(Console.ReadLine());
                     Console.WriteLine();
-                    switch (Menu)
-                    {
+
+                    switch (Menu){
                         case 1:
                             PrintGrafo(grafo);
                             break;
@@ -221,48 +203,55 @@ namespace Lista_pratica
                             break;
 
                         case 8:
+                            resposta = (grafo.IsUnicursal()) ? "O grafo é Unicursal!" : "O grafo não é Unicursal.";
+                            Resposta(resposta);
+                            break;
+
+                        case 9:
+                            resposta = (grafo.IsEuleriano()) ? "O grafo é Euleriano!" : "O grafo não é Euleriano.";
+                            Resposta(resposta);
+                            break;
+
+                        case 10:
                             resposta = (grafo.IsConexo()) ? "O grafo é conexo!" : "O grafo não é conexo.";
                             Resposta(resposta);
                             break;
+
                         default:
-                            if (Menu != -1)
-                            {
+                            if (Menu != 0){
                                 Console.WriteLine("\nA opção escolhida é inválida. Pressione qualquer tecla e tente novamente.");
                                 Console.ResetColor();
                             }
                             break;
                     }
-                    if (Menu != -1)
-                    {
+                    if (Menu != 0){
                         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal.");
                         Console.ReadKey();
                     }
-                } while (Menu != -1);
+                } while (Menu != 0);
             }
         }
 
         /*
         *Menu de opções do programa
         */
-        static void menu(bool dirigido)
-        {
-            if (dirigido)
-            {
+        static void menu(bool dirigido){
+
+            if (dirigido){
                 Console.WriteLine("Nomes: Caio Lucas F. Dos Santos matricula:604365");
                 Console.WriteLine("Wernen Rodrigues Maciel matricula:597704");
 
                 Console.WriteLine("Menu do grafo dirigido");
-                Console.WriteLine("-1 - Sair.");
+                Console.WriteLine(" 0 - Sair.");
                 Console.WriteLine(" 1 - Imprimir grafo.");
                 Console.WriteLine(" 2 - Obter o grau de entrada do vértice.");
                 Console.WriteLine(" 3 - Obter grau de saída do vértice.");
             }
-            else
-            {
-                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos 604365");
+            else{
+                Console.WriteLine("Nomes: Caio Lucas F. Dos Santos matricula:604365");
                 Console.WriteLine("Wernen Rodrigues Maciel matricula:597704");
                 Console.WriteLine("Menu do grafo não-dirigido");
-                Console.WriteLine("-1 - Sair.");
+                Console.WriteLine(" 0 - Sair.");
                 Console.WriteLine(" 1 - Imprimir grafo.");
                 Console.WriteLine(" 2 - Verificar se pelo menos (2) dois vértices são adjacentes.");
                 Console.WriteLine(" 3 - Obter grau o vértice.");
@@ -270,7 +259,9 @@ namespace Lista_pratica
                 Console.WriteLine(" 5 - Verificar se um vértice do grafo é regular.");
                 Console.WriteLine(" 6 - Verificar se um vértice do grafo é nulo.");
                 Console.WriteLine(" 7 - Verificar se o grafo é completo.");
-                Console.WriteLine(" 8 - Verificar se o grafo é conexo.");
+                Console.WriteLine(" 8 - Verificar se o grafo é Unicursal.");
+                Console.WriteLine(" 9 - Verificar se o grafo é Euleriano.");
+                Console.WriteLine(" 10 - Verificar se o grafo é conexo.");
             }
         }
     }
