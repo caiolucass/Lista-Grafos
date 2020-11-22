@@ -1,0 +1,4 @@
+Michelle, por algum motivo que ainda não identifiquei o programa está rodando no VScode de forma correta, porém na parte de inicialização do arquivo ele trava, mas sem erro. Creio que deve ser algum erro do meu plugin do C# ou do meu debbuger. 
+Então peço que por favor, se possível, rode e debug o programa pelo propio Visual studio original. Espero que entenda!
+
+Muito obrigado!
