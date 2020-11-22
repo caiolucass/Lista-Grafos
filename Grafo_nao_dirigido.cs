@@ -201,7 +201,27 @@ namespace Lista_pratica{
          *Método para ver se o grafo é unicursal
          */
         public bool IsUnicursal(){
-            return true;
+            int contador_Impar = 0;
+            bool eureliano = this.IsEuleriano();
+
+            if (eureliano){
+                for (int i = 1; this.Lista_Vertice.Count(); i++)
+                {
+                    var grau = GetGrau(i);
+
+                    if (grau % 2 != 0) {
+                        contador_Impar++;
+                    }
+                }
+                if (contador_Impar == 2){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
         }
 
         /*
