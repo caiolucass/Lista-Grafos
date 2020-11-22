@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wernen\\Downloads\\Lista_pratica(corrigido)\\Lista_pratica.csproj": {}
+    "C:\\Users\\caioz\\OneDrive\\Documentos\\Lista_pratica\\Lista_pratica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wernen\\Downloads\\Lista_pratica(corrigido)\\Lista_pratica.csproj": {
+    "C:\\Users\\caioz\\OneDrive\\Documentos\\Lista_pratica\\Lista_pratica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wernen\\Downloads\\Lista_pratica(corrigido)\\Lista_pratica.csproj",
+        "projectUniqueName": "C:\\Users\\caioz\\OneDrive\\Documentos\\Lista_pratica\\Lista_pratica.csproj",
         "projectName": "Lista_pratica",
-        "projectPath": "C:\\Users\\Wernen\\Downloads\\Lista_pratica(corrigido)\\Lista_pratica.csproj",
-        "packagesPath": "C:\\Users\\Wernen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wernen\\Downloads\\Lista_pratica(corrigido)\\obj\\",
+        "projectPath": "C:\\Users\\caioz\\OneDrive\\Documentos\\Lista_pratica\\Lista_pratica.csproj",
+        "packagesPath": "C:\\Users\\caioz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caioz\\OneDrive\\Documentos\\Lista_pratica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Wernen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\caioz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

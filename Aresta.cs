@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 *Caio Lucas F. Dos Santos  Matrícula:604365
 *Wernen Rodrigues Maciel   Matrícula:597704
 */
-
 namespace Lista_pratica{
 
     public class Aresta{
@@ -46,13 +45,13 @@ namespace Lista_pratica{
             if (this.direcao != 0){
 
                 if (this.direcao == 1){
-                    return this.vert_1.Nome + "->" + this.vert_2.Nome;
+                    return this.vert_1.Titulo + "->" + this.vert_2.Titulo;
                 }else
                 {
-                    return this.vert_2.Nome + "->" + this.vert_2.Nome;
+                    return this.vert_2.Titulo + "->" + this.vert_2.Titulo;
                 }
             }else {
-                return this.vert_1.Nome + "--" + this.vert_2.Nome;
+                return this.vert_1.Titulo + "--" + this.vert_2.Titulo;
             }
         }
 

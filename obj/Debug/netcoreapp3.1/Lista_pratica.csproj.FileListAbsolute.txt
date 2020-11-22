@@ -37,3 +37,16 @@ C:\Users\Wernen\Downloads\Lista_pratica(corrigido)\obj\Debug\netcoreapp3.1\Lista
 C:\Users\Wernen\Downloads\Lista_pratica(corrigido)\obj\Debug\netcoreapp3.1\Lista_pratica.dll
 C:\Users\Wernen\Downloads\Lista_pratica(corrigido)\obj\Debug\netcoreapp3.1\Lista_pratica.pdb
 C:\Users\Wernen\Downloads\Lista_pratica(corrigido)\obj\Debug\netcoreapp3.1\Lista_pratica.genruntimeconfig.cache
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.exe
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.deps.json
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.runtimeconfig.json
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.runtimeconfig.dev.json
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.dll
+C:\Users\Wernen\Downloads\Lista_pratica\bin\Debug\netcoreapp3.1\Lista_pratica.pdb
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.csprojAssemblyReference.cache
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.AssemblyInfoInputs.cache
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.AssemblyInfo.cs
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.csproj.CoreCompileInputs.cache
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.dll
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.pdb
+C:\Users\Wernen\Downloads\Lista_pratica\obj\Debug\netcoreapp3.1\Lista_pratica.genruntimeconfig.cache

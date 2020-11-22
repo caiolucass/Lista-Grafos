@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 *Caio Lucas F. Dos Santos  Matrícula:604365
 *Wernen Rodrigues Maciel   Matrícula:597704
 */
-
 namespace Lista_pratica{
     
     public class Grafo_dirigido : Grafo, Interface_grafo_dirigido{
@@ -38,9 +37,11 @@ namespace Lista_pratica{
                 Vert_1_aux = this.procurar_Vertice(Vert_1);
                 Vert_2_aux = this.procurar_Vertice(Vert_2);
 
+               if (Vert_1_aux == null)
                 {
                     this.Lista_Vertice.Add(Vert_1);
-                }else{
+                }
+                else{
                     Vert_1 = Vert_1_aux;
                 }
 

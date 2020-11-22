@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-///<sumary name="Caio Lucas F. Dos Santos  604365" name = "Wernen Rodrigues Maciel" />
-
+/*
+*Caio Lucas F. Dos Santos  Matrícula:604365
+*Wernen Rodrigues Maciel   Matrícula:597704
+*/
 namespace Lista_pratica{
 
    public class Grafo{
@@ -37,7 +39,7 @@ namespace Lista_pratica{
         public Vertice procurar_Vertice(Vertice v){
             for (int i = 0; i < lista_Vertice.Count(); i++) {
 
-                if (lista_Vertice[i].titulo == v.titulo){
+                if (lista_Vertice[i].Titulo == v.Titulo){
                     return lista_Vertice[i];
                 }
             }
@@ -51,19 +53,16 @@ namespace Lista_pratica{
             v1 = this.procurar_Vertice(v1);
             v2 = this.procurar_Vertice(v2);
 
-            //verifica se os vertices sao nulos
             if (v1 == null || v2 == null){
                 return false;
             }
-
-            //percorre a lista de vertices, contando seus numeros
             for (int i = 0; i < this.lista_Vertice.Count(); i++){
 
-                if (this.lista_Vertice[i].titulo == v1.titulo){
+                if (this.lista_Vertice[i].Titulo == v1.Titulo){
 
                     for (int j = 0; j < this.lista_Vertice[i].Adjacente.Count(); j++){
 
-                        if (this.lista_Vertice[i].Adjacente[j].titulo == v2.titulo){
+                        if (this.lista_Vertice[i].Adjacente[j].Titulo == v2.Titulo){
                             return true;
                         }
                     }
@@ -87,8 +86,7 @@ namespace Lista_pratica{
 
         /*
          *Seção dos métodos Getters e Setters
-         */
-         
+         */       
         //Quantidade de vertices
         public int Quant_Vertices{
             get => quant_Vertices;
