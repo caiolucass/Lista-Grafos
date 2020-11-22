@@ -205,7 +205,7 @@ namespace Lista_pratica{
             bool eureliano = this.IsEuleriano();
 
             if (eureliano){
-                for (int i = 1; this.Lista_Vertice.Count(); i++)
+                for (int i = 1; i < this.Lista_Vertice.Count(); i++)
                 {
                     var grau = GetGrau(i);
 
@@ -219,7 +219,8 @@ namespace Lista_pratica{
                     return false;
                 }
             }
-            else{
+            else
+{
                 return false;
             }
         }
