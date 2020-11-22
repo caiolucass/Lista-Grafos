@@ -43,11 +43,8 @@ namespace Lista_pratica{
          *Método para  obter o vértice adjacente
          */
         public Vertice get_Adjacente(Vertice vertice){
-
-            //percorre os vértices adjacentes
             for (int i = 0; i < this.adjacente.Count(); i++)
             {
-                //verifica se o vertice é igual ao vertice adjacente
                 if (vertice.titulo == this.adjacente[i].titulo){
                     return this.adjacente[i];
                 }
@@ -76,13 +73,11 @@ namespace Lista_pratica{
             set { titulo = value; }
         }
 
-        //Lista de vértices adjacentes
         public List<Vertice> Adjacente{
             get => adjacente;
             set => adjacente = value;
         }
 
-        //Lista de arestas
         public List<Aresta> Aresta{
             get => aresta;
             set => aresta = value;
